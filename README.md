@@ -35,6 +35,8 @@ Gray-box internal penetration test of a simulated HIPAA-regulated dental practic
 
 *Note: Simulated client environment for academic capstone. No real patient data or live production systems involved.*
 
+*Specific environment details (IP ranges, domain names, hostnames) have been redacted from this public writeup. Full technical details are available on request for serious inquiries.*
+
 ---
 
 *More projects coming as I work through TryHackMe SOC Level 1 and build out a home AD detection lab.*
