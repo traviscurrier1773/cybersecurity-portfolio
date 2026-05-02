@@ -31,7 +31,7 @@ Gray-box internal penetration test of a simulated HIPAA-regulated dental practic
 - Triaged 18 Nessus findings with HIPAA-aligned remediation guidance
 - Co-authored a 100+ page IT & Cybersecurity Operations Manual and Disaster Recovery Plan
 
-[Full writeup →](./gcd-capstone/README.md) *(coming soon)*
+[Full writeup →](./gcd-capstone/README.md)
 
 *Note: Simulated client environment for academic capstone. No real patient data or live production systems involved.*
 
