@@ -44,7 +44,7 @@ Specific contributions:
 
 ## Findings
 
-Seven confirmed vulnerabilities were validated and documented in the final report. Severity was assigned using a CVSS-aligned internal rubric.
+Five confirmed vulnerabilities were validated and documented in the final report. Severity was assigned using a CVSS-aligned internal rubric.
 
 | ID | Finding | Severity |
 |---|---|---|
