@@ -92,12 +92,19 @@ The image was added as a data source to an existing Autopsy case for LoneWolf an
 
 **Recycle Bin.** Deleted documents recovered from the recycle bin discussed the Second Amendment and the accessibility of firearms.
 
-**Desktop and Recent Files.** Several files were identified by name as warranting closer review and were preserved in a CSV for the report:
+**Desktop and Recent Files.** Several files surfaced by name from the Desktop, the Recent items list, and the user's MRU (Most Recently Used) registry keys warranted closer review. They were preserved in a CSV for the report. Notable items:
 
-- `Cloudy Manifesto`
-- `SelfDefeseisMurder`
-- `DeathToll`
-- `AIRPORT INFORMATION`
+- `The Cloudy Manifesto.docx`
+- `Planning.docx`
+- `Cloudy thoughts (4apr).docx`
+- `AIRPORT INFORMATION.docx`
+- `Operation 2nd Hand Smoke.pptx`
+- `SelfDefenseisMurder.pdf`
+- `UKknifeBan.pdf`, `LeftUsesBoycotts.pdf`, `AMEN.pdf`
+- Image files including `DeathToll.jpg`, `RedGuns.jpg`, `DemLogic.jpg`, `BladeofGrass.jpg`, `CubaDearmed.jpg`, `Sheep.jpg`, `Huckleberry.png`, `DarkWolf.png`
+- Saved web pages: *Cubs' Anthony Rizzo Praises Parkland Kids Says 'It's too Easy to Get a Gun'.html* and *Larry King: Time to Repeal the 'Poorly Written' Second Amendment.html*
+
+The Recent Documents registry key also referenced a removable volume labeled `CloudLog (D:)`, consistent with use of one of the SanDisk USB devices identified in the device history.
 
 **Browser History.** Searches identified in the recent browsing history that warranted attention included:
 
@@ -106,8 +113,26 @@ The image was added as a data source to an existing Autopsy case for LoneWolf an
 
 The history also contained references to Washington D.C., the Democratic National Committee headquarters, and "gun free zones."
 
-## 8. Why This Matters
+## 8. Sample Timeline Events
+
+A small selection of representative events from the Plaso super-timeline. Each entry was located by filtering `timeline.csv` in Timeline Explorer for filenames and registry paths of investigative interest. Times are UTC.
+
+| Time (UTC) | Source | Event |
+|---|---|---|
+| 2018-04-02 01:35:27 | MFT / NTFS `$FILE_NAME` | `The Cloudy Manifesto.docx` (816,313 bytes) created at `C:\Users\jcloudy\Desktop\` |
+| 2018-04-02 01:35:28 | Registry `OpenSavePidlMRU` | `The Cloudy Manifesto.docx` recorded in the Office save-dialog history under the `jcloudy` user |
+| 2018-04-03 06:11:21 | Registry `Software\Microsoft\Office\16.0\Word\Reading Locations` | Word recorded a reading position inside `The Cloudy Manifesto.docx`, indicating the file was opened in Word at that time |
+| 2018-04-05 02:39:29 | Registry `OpenSavePidlMRU\docx` | `Cloudy thoughts (4apr).docx`, `Planning.docx`, and `AIRPORT INFORMATION.docx` appeared in the same MRU list as `The Cloudy Manifesto.docx`, indicating the same workflow handled all four documents |
+| 2018-04-05 07:02:27 | Registry `Word\File MRU` | Word's recent-file list named, in order, `Planning.docx`, `Cloudy thoughts (4apr).docx`, `AIRPORT INFORMATION.docx`, `The Cloudy Manifesto.docx` |
+| 2018-04-06 03:56:32 | Registry `OpenSavePidlMRU\*` | Broad MRU listed `SelfDefenseisMurder.pdf`, `UKknifeBan.pdf`, `LeftUsesBoycotts.pdf`, `AMEN.pdf`, image files including `DeathToll.jpg`, and the saved Larry King and Anthony Rizzo HTML articles |
+| 2018-04-06 12:27:08 | Registry `RecentDocs` | Recent Documents listed `Planning.docx`, `Cloudy thoughts (4apr).docx`, `AIRPORT INFORMATION.docx`, `The Cloudy Manifesto.docx`, plus the volume `CloudLog (D:)` — consistent with the SanDisk USB devices identified in Autopsy |
+
+Note on the 2025-03-13 timestamps that appear in the CSV against `The Cloudy Manifesto.lnk`: these are the *examiner's* access times during this investigation, not subject activity. They are present because the LNK file was read at examination time and OS file-stat records that access.
+
+## 9. Why This Matters
 
 Each artifact type taken in isolation is unremarkable. USB flash drive history, cloud storage installations, and even searches about ammunition or extradition are common on a typical machine and are not in themselves indicators of wrongdoing.
 
-The conclusion drawn in this examination rests on the *combination* of artifacts: documents named in a way that suggests planning content (`Cloudy Manifesto`, `SelfDefeseisMurder`, `DeathToll`, `AIRPORT INFORMATION`), browser searches consistent with planning travel without legal recourse and acquiring ammunition, and references to specific locations of public significance. Considered together, and in the context of the case as briefed by the requesting party, these artifacts provide reasonable grounds for further investigation. A determination of intent or criminal liability is outside the scope of this examination and would require additional sources of evidence beyond the disk image.
+The conclusion drawn in this examination rests on the *combination* of artifacts: a cluster of documents authored or handled together over a roughly four-day window (`The Cloudy Manifesto.docx`, `Planning.docx`, `Cloudy thoughts (4apr).docx`, `AIRPORT INFORMATION.docx`); supporting reference material including PDFs and saved articles oriented around firearms, self-defense law, and the Second Amendment; image files such as `DeathToll.jpg`; browser searches consistent with planning travel to non-extradition countries and acquiring ammunition; references to Washington D.C., the Democratic National Committee headquarters, and "gun free zones"; and registry evidence that the same workflow involved a removable USB volume.
+
+Considered together, and in the context of the case as briefed by the requesting party, these artifacts provide reasonable grounds for further investigation. A determination of intent or criminal liability is outside the scope of this examination and would require additional sources of evidence beyond the disk image.
