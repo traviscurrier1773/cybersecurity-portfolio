@@ -1,0 +1,28 @@
+# Memory dumps and disk images — never commit these
+*.raw
+*.mem
+*.dmp
+*.vmem
+*.bin
+*.img
+*.dd
+*.E01
+*.aff
+
+# Volatility output files (can be regenerated)
+pslist.txt
+pstree.txt
+malprocfind.txt
+dlllist.txt
+hashdump.txt
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor noise
+.vscode/
+.idea/
+*.swp
+*~
