@@ -30,8 +30,8 @@ Browsed the Target output to surface user-activity artifacts. Two paths were par
 
 Files surfaced from the Recent list and elsewhere:
 
-- `Cloudy Manifesto`
-- `SelfDefeseisMurder`
+- `The Cloudy Manifesto`
+- `SelfDefenseisMurder` *(originally written as `SelfDefeseisMurder` in the KAPE notes; correct spelling confirmed by the Plaso timeline registry artifacts in Phase 2)*
 - `DeathToll`
 - `AIRPORT INFORMATION`
 
@@ -71,6 +71,19 @@ psort           →    timeline.csv
 ```
 
 Opened `timeline.csv` in Eric Zimmerman's Timeline Explorer and reviewed the events.
+
+### Filtering for Files of Interest
+
+Filtered the timeline on filenames identified during Phase 1 (`manifesto`, `airport`, `selfdef`, `deathtoll`) and on parser types that tend to carry user-activity context (`mft`, `lnk`, `winreg/winreg_default`, `winreg/mrulistex_*`, `olecf/olecf_automatic_destinations`).
+
+Notable findings:
+
+- The earliest concrete creation timestamp for `The Cloudy Manifesto.docx` on the Desktop was 2018-04-02 01:35:27 UTC, with a file size of 816,313 bytes. Confirmed via the MFT `$FILE_NAME` attribute, the matching `.lnk` shortcut, and the Recent AutomaticDestinations jump-list entry.
+- A Word "Reading Locations" registry value at 2018-04-03 06:11:21 UTC recorded the user's last reading position inside the manifesto. This is more probative than a file-stat timestamp because the registry only writes that key when the document is actually open and being read in Word.
+- MRU registry keys on 2018-04-05 and 2018-04-06 clustered `The Cloudy Manifesto.docx` with `Planning.docx`, `Cloudy thoughts (4apr).docx`, `AIRPORT INFORMATION.docx`, `Operation 2nd Hand Smoke.pptx`, `SelfDefenseisMurder.pdf`, `UKknifeBan.pdf`, `LeftUsesBoycotts.pdf`, `AMEN.pdf`, several image files (including `DeathToll.jpg`), and saved HTML articles. These represent additional material handled in the same workflow that didn't appear in the Phase 1 KAPE notes.
+- The `RecentDocs` registry on 2018-04-06 also referenced a removable volume labeled `CloudLog (D:)`. Cross-references to the SanDisk USB devices identified in Phase 3 (Autopsy) suggest one of those drives was active during this period.
+
+Also noted: some entries against `The Cloudy Manifesto.lnk` carried 2025-03-13 timestamps. These are examiner access times during this investigation, not subject activity, and were excluded from the findings.
 
 ---
 
@@ -120,12 +133,12 @@ Deleted files recovered from the recycle bin included documents discussing the S
 
 Files appearing on the Desktop or in the Recent items list that warranted closer review (and were saved separately):
 
-- `Cloudy Manifesto`
-- `SelfDefeseisMurder`
+- `The Cloudy Manifesto`
+- `SelfDefenseisMurder`
 - `DeathToll`
 - `AIRPORT INFORMATION`
 
-These match the files surfaced in Phase 1 (KAPE), providing cross-tool corroboration.
+These match the files surfaced in Phase 1 (KAPE) and Phase 2 (Plaso timeline), providing cross-tool corroboration.
 
 ### Wrap-Up
 
