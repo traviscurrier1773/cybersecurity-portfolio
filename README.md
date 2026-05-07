@@ -39,6 +39,28 @@ Gray-box internal penetration test of a simulated HIPAA-regulated dental practic
 
 ---
 
+### [Windows Forensic Examination — LoneWolf Case](./windows-forensics-lonewolf/README.md)
+
+*CS 472 Digital Forensics | Pensacola Christian College | Spring 2025*
+
+Full Windows forensic examination of the LoneWolf training image, covering image mounting, KAPE triage, super-timeline reconstruction with Plaso, and case examination with Autopsy.
+
+**Tools:** FTK Imager, Arsenal Image Mounter, KAPE, Plaso (log2timeline / psort), Eric Zimmerman's Timeline Explorer, Autopsy
+
+**Highlights:**
+
+- Switched from FTK Imager to Arsenal Image Mounter after KAPE flagged warnings against the initial mount; documented the decision
+- Ran KAPE Targets/Modules and surfaced files of investigative interest from the `jcloudy` user profile
+- Built a super-timeline by pivoting from a non-working Docker workflow to a native Plaso install when Docker proved unworkable
+- Cross-referenced findings across KAPE, Plaso timeline, and Autopsy for corroboration before drawing conclusions
+- Drafted the conclusion in measured language ("reasonable grounds for further investigation") rather than overstating intent
+
+[Full writeup →](./windows-forensics-lonewolf/README.md)
+
+*Well-known training case used in academic digital forensics courses — not a real investigation.*
+
+---
+
 ### [Memory Forensics — Windows 8.1 RAM Analysis with Volatility](./memory-forensics-volatility/README.md)
 
 *CS 472 Digital Forensics | Pensacola Christian College | Spring 2025*
@@ -68,7 +90,7 @@ Triage of a Windows 8.1 memory image using the Volatility framework on the SIFT 
 
 **Defensive:** SIEM (Wazuh), log analysis, network traffic analysis (Zeek, RITA, Wireshark), incident response, vulnerability management
 
-**Forensics:** Memory analysis (Volatility), credential recovery, evidence handling
+**Forensics:** Disk image mounting (FTK Imager, Arsenal Image Mounter), Windows triage (KAPE), super-timeline reconstruction (Plaso), case examination (Autopsy), memory analysis (Volatility), credential recovery, evidence handling
 
 **Infrastructure:** Windows Server, Active Directory, RHEL/Linux, VMware vSphere, PostgreSQL, DNS, Ansible
 
