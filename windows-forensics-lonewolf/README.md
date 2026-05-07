@@ -29,9 +29,11 @@ The LoneWolf disk image (`LoneWolf.E01`) was provided for analysis. The goal was
 | External devices | Two SanDisk SDCZ80 USB flash drives, first connected 2018-03-27; integrated webcam, Bluetooth module, and rate matching hubs |
 | Cloud storage | Dropbox v46.4.65 and Google Drive installed |
 | Recycle bin | Deleted documents discussing the Second Amendment and firearm accessibility |
-| Files of investigative interest (Desktop / Recent) | `Cloudy Manifesto`, `SelfDefeseisMurder`, `DeathToll`, `AIRPORT INFORMATION` |
+| Files of investigative interest (Desktop / Recent / MRU) | `The Cloudy Manifesto.docx`, `Planning.docx`, `Cloudy thoughts (4apr).docx`, `AIRPORT INFORMATION.docx`, `Operation 2nd Hand Smoke.pptx`, `SelfDefenseisMurder.pdf`, `UKknifeBan.pdf`, `LeftUsesBoycotts.pdf`, `AMEN.pdf`, image files including `DeathToll.jpg`, plus saved articles on the Second Amendment |
+| Removable media tied to the activity | `CloudLog (D:)` volume referenced in `RecentDocs`, consistent with the SanDisk USB devices in Autopsy |
 | Browser searches of investigative interest | "most beautiful contries with non extraditionk"; "Buy 9mm ammo Online at Gunbroker.com" |
 | Browser references | Washington D.C., the Democratic National Committee headquarters, "gun free zones" |
+| Timeline corroboration | Word "Reading Locations" registry key recorded the user actively viewing `The Cloudy Manifesto.docx` on 2018-04-03; multiple MRU registry keys clustered the same documents together over 2018-04-02 to 2018-04-06 |
 
 ## Conclusion
 
